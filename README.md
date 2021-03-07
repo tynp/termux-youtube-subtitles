@@ -14,4 +14,4 @@ shared to it using youtube-dl. I wanted a somewhat easy way to view Chinese subt
 7. Share a youtube URL to Termux.
 8. View the subtitles found for the view in the list and type in the desired one.
 9. `youtube-dl` will download the subtitle.
-10. Use the subtitle file. For Pleco, select to the File Reader and Open New File. Browse to the `Youtube-DL` directory located at `/storage/emulated/0/Youtube-DL`. Select the subtitle file.
+10. Use the subtitle file. For Pleco, select to the File Reader and Open New File. Browse to the `Youtube-DL` directory located at `/storage/emulated/0/Youtube-DL`. Select the subtitle file. (Can also do a quick clean of the timestamp metadata from the file with a `sed -i '/-->/d' /storage/emulated/0/Youtube-DL/${FILE}`)
