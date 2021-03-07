@@ -11,7 +11,11 @@ shared to it using youtube-dl. I wanted a somewhat easy way to view Chinese subt
 `curl https://raw.githubusercontent.com/tynp/termux-youtube-subtitles/master/youtubedl_androidsetup.sh > install.sh`
 5. Run it:  
    `chmod +x ./install.sh && ./install.sh`
-7. Share a youtube URL to Termux.
-8. View the subtitles found for the view in the list and type in the desired one.
-9. `youtube-dl` will download the subtitle.
-10. Use the subtitle file. For Pleco, select to the File Reader and Open New File. Browse to the `Youtube-DL` directory located at `/storage/emulated/0/Youtube-DL`. Select the subtitle file. (Can also do a quick clean of the timestamp metadata from the file with a `sed -i '/-->/d' /storage/emulated/0/Youtube-DL/${FILE}`)
+   
+## Usage
+1. Share a youtube URL to Termux.
+2. View the subtitles found in the list and type in the desired one. If the video contains both automatic captions and manual subs, the script will prompt for which source to use.
+3. `youtube-dl` will download the subtitle to `/storage/emulated/0/Youtube-DL`.
+4. Use the subtitle file.
+
+For Pleco, select the File Reader and Open New File. Browse to the `Youtube-DL` directory (`/storage/emulated/0/Youtube-DL`). Select the subtitle file. I suggest performing a `sed -i '/-->/d' /storage/emulated/0/Youtube-DL/${FILE}` in Termux to remove the timestamp metadata.
